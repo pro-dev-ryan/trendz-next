@@ -1,13 +1,26 @@
-import Image from "next/image";
-import { Raleway } from "@next/font/google";
-import styles from "./page.module.css";
+import Homepage from "app/Home/page";
+import { Nunito_Sans, Raleway, EB_Garamond } from "@next/font/google";
 
-const raleway = Raleway({ subsets: ["latin"] });
+export const nunito = Nunito_Sans({
+  subsets: ["latin"],
+  weight: ["200", "400"],
+  variable: ["--font-nunito"],
+});
+export const raleway = Raleway({
+  subsets: ["latin"],
+  weight: ["600", "700"],
+  variable: ["--font-raleway"],
+});
+export const garamond = EB_Garamond({
+  subsets: ["latin"],
+  weight: ["variable"],
+  variable: ["--font-gara"],
+});
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <h1 className={`${raleway.className}`}>This is the new Way</h1>
+    <main>
+      <Homepage />
     </main>
   );
 }
