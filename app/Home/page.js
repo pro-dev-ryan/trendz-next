@@ -7,8 +7,9 @@ const raleway = Raleway({
 
 const Homepage = () => {
   return (
-    <div>
-      <h1 className={`${raleway.className} font-head`}>This is the new Way</h1>
+    <div className="bg-emerald-100 h-full">
+      <div className="image"></div>
+      <div>text</div>
     </div>
   );
 };
